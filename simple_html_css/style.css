@@ -1,0 +1,25 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+.card {
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: blue;
+}
+
+.list {
+    list-style: none;
+    text-align: center;
+}
+
+.list li {
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}

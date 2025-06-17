@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--以下参照。https://getbootstrap.jp/docs/5.3/components/list-group/-->
+
+<h2 class="text-center">登録情報の確認</h2>
+
+<ul class="list-group">
+    <li class="list-group-item"><strong>名前：</strong>{{ register_detail.name }}</li>
+    <li class="list-group-item"><strong>所属：</strong>{{ register_detail.belonging }}</li>
+    <li class="list-group-item"><strong>趣味：</strong>{{ register_detail.hobby }}</li>
+</ul>
+
+<div class="mt-3">
+    {% if back %}
+        <a href="{% url 'introduction:register_detail' back.id %}" class="btn btn-secondary">← 戻る</a>
+    {% endif %}
+
+    {% if next %}
+        <a href="{% url 'introduction:register_detail' next.id %}" class="btn btn-primary">次へ →</a>
+    {% endif %}
+</div>
+{% endblock %}

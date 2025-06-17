@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <h1>自己紹介アプリ</h1>
+        <p class="lead">自己紹介データの登録と閲覧が行えます!</p>
+        <p><del>というか、それしかできません。。。</del></p>
+        
+        <a href="{% url 'introduction:register' %}" class="btn btn-primary">自己紹介の登録</a>
+        <a href="{% url 'introduction:register_detail' pk=1 %}" class="btn btn-secondary">自己紹介を確認</a>
+</div>
+{% endblock %}

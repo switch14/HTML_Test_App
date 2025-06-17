@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="text-center">登録フォーム</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        {{ form.name.label_tag }}
+        {{ form.name }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.belonging.label_tag }}
+        {{ form.belonging }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.hobby.label_tag }}
+        {{ form.hobby }}
+    </div>
+
+    <button type="submit" class="btn btn-success">登録</button>
+{% endblock %}
